@@ -4,4 +4,6 @@ def add(a, b):
     return a * b
 
 if __name__ == "__main__":
-    print("Нәтиже:", add(2, 3))
+    input_a = float(input("Бірінші санды енгізіңіз: "))
+    input_b = float(input("Екінші санды енгізіңіз: "))  
+    print("Нәтиже:", add(input_a, input_b))
