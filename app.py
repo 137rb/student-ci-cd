@@ -3,7 +3,8 @@ def add(a, b):
         raise ValueError("Тек сан болуы қажет")
     return a * b
 
+import random
 if __name__ == "__main__":
-    input_a = float(input("Бірінші санды енгізіңіз: "))
-    input_b = float(input("Екінші санды енгізіңіз: "))  
+    input_a = random.uniform(1, 10)  # Бірінші санды кездейсоқ генерациялау
+    input_b = random.uniform(1, 10)  # Екінші санды кездейсоқ генерациялау
     print("Нәтиже:", add(input_a, input_b))
