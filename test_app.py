@@ -2,13 +2,16 @@ import pytest
 from app import add
 
 def test_add_positive():
-    assert add(2, 3) == 6
+    list1 = [1, 2, 3, 4, 5, 6]
+    assert add(list1) == 209
 
 def test_add_negative():
-    assert add(-1, -1) == 1
+    list2 = [-1, -2, -3, -4, -5, -6]
+    assert add(list2) == -97
 
 def test_add_float():
-    assert add(2.5, 2.5) == 6.25
+    list3 = [1.1, 2.2, 3.3, 4.4, 5.5, 6.6]
+    assert add(list3) == 586.971
 
 def test_add_invalid():
     with pytest.raises(ValueError):

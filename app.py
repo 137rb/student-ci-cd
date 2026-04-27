@@ -1,10 +1,13 @@
-def add(a, b):
-    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
-        raise ValueError("Тек сан болуы қажет")
-    return a * b
+def add(lst):
+    total = 0
+    for value in lst:
+        if value % 2 == 0:
+            total += value ** 2
+        else:
+            total += value ** 3
+    return total
 
 import random
 if __name__ == "__main__":
-    input_a = random.uniform(1, 10)  # Бірінші санды кездейсоқ генерациялау
-    input_b = random.uniform(1, 10)  # Екінші санды кездейсоқ генерациялау
-    print("Нәтиже:", add(input_a, input_b))
+    list1 = [1.1, 2.2, 3.3, 4.4, 5.5, 6.6]
+    print(add(list1))
